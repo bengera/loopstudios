@@ -1,0 +1,62 @@
+.footer {
+    background-color: $color-black;
+    padding: 2rem;
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    
+    
+    &__left {
+      // border: 2px solid green;
+    }
+  
+    &__logo {
+      
+    }
+  
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      list-style: none;
+      
+    }
+  
+    &__list-item {
+      
+      
+    }
+  
+    &__list-link {
+      color: $color-white;
+      text-decoration: none;
+      
+    }
+  
+  
+    /////////////////////////////////////////////////////
+  
+    &__right {
+      // border: 2px solid yellow;
+    }
+  
+    &__social {
+      display: flex;
+      justify-content: center;
+      gap: 1.3rem;
+      
+    }
+  
+    &__small {
+      color: $color-very-dark-gray;
+      font-size: 100%;
+    }
+  
+  
+  }
+  
+  .icon {
+    cursor: pointer;
+  }

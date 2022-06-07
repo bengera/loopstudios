@@ -63,6 +63,11 @@ main {
 }
 
 
+//MARGINS
+
+.margin-sm-1 {
+  margin-bottom: 1rem;
+}
 
 .margin-sm-5 {
   margin-bottom: 5rem;
@@ -70,51 +75,3 @@ main {
 
 
 
-// creations
-
-.creations {
-
-  &__btn {
-    background-color: white;
-    border: 2px solid black;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin:0 auto;
-    max-width: 50%;
-    padding: 1rem 3rem;
-    
-  }
-}
-
-.gallery-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem;
-}
-
-.gallery {
-
-  position: relative;
-
-
-  &__img {
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
-  }
-
-  &__figcaption {
-    color: $color-white;
-    font-family: $font-secondary;
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    text-transform: uppercase;
-    font-size: 30px;
-  }
-}
-
-figure.gallery:nth-child(2)>picture:nth-child(1)>img:nth-child(3) {
-  filter: brightness(60%);
-}
