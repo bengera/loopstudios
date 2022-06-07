@@ -6,8 +6,10 @@ $color-very-dark-gray: hsl(0, 0%, 41%);
 
 
 // FONT VARIABLES
-$font-primary: 'Alata', sans-serif;
-$font-secondary: 'Josefin Sans', sans-serif;
+$font-primary: 'Alata',
+sans-serif;
+$font-secondary: 'Josefin Sans',
+sans-serif;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
@@ -34,34 +36,64 @@ $bp-desktop: 62.5em;
 }
 
 html {
-  
+
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
 
- 
+
 }
 
 
 
 body {
-    font-family: $font-primary;
-    font-size: 15px;
-    
+  font-family: $font-primary;
+  font-size: 16px;
+
 
 }
 
 main {
-    max-width: 1440px;
-    margin: 0 auto;
-    
+  max-width: 1440px;
+  margin: 0 auto;
 
-    
-    
+
+
+
 }
 
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(0, 113, 128);
+.margin-sm-5 {
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 300;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+  
+  &__picture {}
+
+  &__description {
+    color: $color-very-dark-gray;
+    line-height: 26px;
+    max-width: 90%;
+    margin: 0 auto;
+
+  }
+}
+
+.img-interactive {
+  width: auto;
+  max-width: 95%;
+  height: auto;
+  margin-bottom: 1rem;
 }
