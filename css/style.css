@@ -358,9 +358,22 @@ h1 {
     padding-top: 2rem; }
   .header__logo {
     height: 30px; }
+  .header__logo.active {
+    z-index: 100; }
   .header__list {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: absolute;
+    top: 16rem;
+    margin-left: 2.5rem;
+    font-size: 2rem;
+    gap: 1rem; }
+  .header__list-item {
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase; }
+  .header__list-link {
+    text-decoration: none;
+    color: white; }
 
 .hamburger-menu {
   background-color: transparent;
@@ -373,14 +386,23 @@ h1 {
   background-position: center center;
   z-index: 20; }
 
+.hamburger-menu.active {
+  background-image: url(../img/icon-close.svg); }
+
 .nav {
-  display: none;
+  display: block;
   position: absolute;
   background-color: black;
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  transform: translateX(400%);
+  transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1); }
+
+.nav.active {
+  display: block;
+  transform: translateX(0); }
 
 h2 {
   font-size: 35px;
@@ -448,6 +470,8 @@ figure.gallery:nth-child(2) > picture:nth-child(1) > img:nth-child(3) {
   flex-direction: column;
   gap: 2rem;
   text-align: center; }
+  .footer__logo {
+    margin-bottom: 1rem; }
   .footer__list {
     display: flex;
     flex-direction: column;
