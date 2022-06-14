@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Loopstudios landing page</title>
 
+  <link rel="shortcut icon" href="#">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
@@ -62,8 +63,12 @@
     </section>
 
 <section class="creations margin-sm-5">
+    <div class="creations__top-bar">
     <h2 class="creations__heading">Our creations</h2>
-
+    <button class="creations__btn--desktop">
+      See all
+    </button>
+  </div>
     <div class="gallery-container">
     
       <figure class="gallery">
@@ -181,7 +186,31 @@
  
 
   
+<script>
 
+
+
+  (function () {
+    window.onresize = displayWindowSize;
+    window.onload = displayWindowSize;
+  
+    function displayWindowSize() {
+      let myWidth = window.innerWidth;
+      console.log(myWidth);
+      
+      if (myWidth >= 650) {
+        button.setAttribute("style", "display:none");
+        buttonDesk.setAttribute("style", "display:block");
+      } else {
+        button.setAttribute("style", "display:block");
+        buttonDesk.setAttribute("style", "display:none");
+      }
+      
+    }
+  })();
+
+
+</script>
 
 
 

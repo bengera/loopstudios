@@ -2,14 +2,14 @@
 
   &__heading {
     @media only screen and (min-width: $bp-desktop) {
-      // border: 1px solid black;
       max-width: 1060px;
-      margin: 0 auto;
+      margin: 0.5rem 0 0 0;
       text-align: left;
     }
   }
 
-  &__btn {
+  &__btn,
+  &__btn--desktop {
     background-color: white;
     border: 2px solid black;
     text-transform: uppercase;
@@ -19,8 +19,24 @@
     padding: 1rem 3rem;
     cursor: pointer;
 
+    @media only screen and (min-width: $bp-desktop) {
+      margin: 0;
+    }
+    
 
+  }
 
+  &__top-bar {
+
+    @media only screen and (min-width: $bp-desktop) {
+    display: flex;
+    // border: 1px solid black;
+    justify-content: space-between;
+    max-width: 1060px;
+    margin: 0 auto;
+    
+    }
+    
   }
 }
 

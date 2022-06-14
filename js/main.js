@@ -1,8 +1,8 @@
 const menu = document.querySelector('.hamburger-menu');
 const nav = document.querySelector('.nav');
 const logo = document.querySelector('.header__logo');
-
-// const button = document.querySelector('.creations__btn');
+const button = document.querySelector('.creations__btn');
+const buttonDesk = document.querySelector('.creations__btn--desktop');
 
 
 menu.addEventListener('click', () => {
@@ -11,6 +11,11 @@ menu.addEventListener('click', () => {
     nav.classList.toggle('active');
     logo.classList.toggle('active');
     
+
+
     
-    
+       
 })
+
+
+
