@@ -2,6 +2,15 @@
   width: 90%;
   margin: 0 auto;
   overflow-wrap: break-word;
+
+  @media only screen and (min-width: $bp-desktop) {
+    width: 40rem;
+    margin: 15rem 0 0 2rem;
+    // margin: 15rem auto 0 auto;
+
+
+
+  }
 }
 
 h1 {
@@ -15,6 +24,15 @@ h1 {
   margin-top: 50%;
   font-size: 2.9em;
 
+  @media only screen and (min-width: $bp-desktop) {
+    font-size: clamp(30px, 5vw, 60px);
+    margin-top: 0;
+    max-width: 40rem;
+    margin: 5rem 0 0 0;
+
+
+  }
+
 
 }
 
@@ -26,6 +44,14 @@ h1 {
   height: 100vh;
   background-size: cover;
 
+  @media only screen and (min-width: $bp-desktop) {
+    background-image: url(../img/desktop/image-hero.jpg);
+    background-position: center center; //left then top
+    background-repeat: no-repeat;
+    height: 90vh;
+  }
+
+
   &__top {
 
     display: flex;
@@ -33,6 +59,8 @@ h1 {
     justify-content: space-between;
     padding: 1rem;
     padding-top: 2rem;
+
+
 
   }
 
@@ -52,11 +80,27 @@ h1 {
     margin-left: 2.5rem;
     font-size: 2rem;
     gap: 1rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      font-size: 1rem;
+      list-style-type: none;
+      position: static;
+      justify-content: flex-end;
+      margin: 0.5rem 2rem 0 0;
+      gap: 1.7rem;
+      font-weight: 700;
+      
+    }
   }
 
   &__list-item {
     font-family: $font-secondary;
     text-transform: uppercase;
+
+    @media only screen and (min-width: $bp-desktop) {
+      text-transform: none;
+    }
   }
 
   &__list-link {
@@ -75,6 +119,10 @@ h1 {
   height: 30px;
   background-position: center center;
   z-index: 20;
+
+  @media only screen and (min-width: $bp-desktop) {
+    display: none;
+  }
 }
 
 .hamburger-menu.active {
@@ -82,19 +130,26 @@ h1 {
 }
 
 .nav {
-  display: block; 
+  display: block;
   position: absolute;
   background-color: $color-black;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  transform: translateX(400%);
-  transition: transform 1s cubic-bezier(.65,.05,.36,1);
+  transform: translateX(400%); // default 400%
+  // transition: transform 1s cubic-bezier(.65,.05,.36,1);
+
+  @media only screen and (min-width: $bp-desktop) {
+    background-color: transparent;
+    height: 5rem;
+    transform: translateX(0%);
+    position: static;
+
+  }
 }
 
 .nav.active {
   display: block;
   transform: translateX(0);
 }
-

@@ -329,10 +329,18 @@ main {
 .margin-sm-5 {
   margin-bottom: 5rem; }
 
+.header-container {
+  max-width: 1140px;
+  margin: 0 auto; }
+
 .h1-container {
   width: 90%;
   margin: 0 auto;
   overflow-wrap: break-word; }
+  @media only screen and (min-width: 40.625em) {
+    .h1-container {
+      width: 40rem;
+      margin: 15rem 0 0 2rem; } }
 
 h1 {
   color: white;
@@ -344,12 +352,24 @@ h1 {
   padding: 1rem;
   margin-top: 50%;
   font-size: 2.9em; }
+  @media only screen and (min-width: 40.625em) {
+    h1 {
+      font-size: clamp(30px, 5vw, 60px);
+      margin-top: 0;
+      max-width: 40rem;
+      margin: 5rem 0 0 0; } }
 
 .header {
   background-image: url(../img/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover; }
+  @media only screen and (min-width: 40.625em) {
+    .header {
+      background-image: url(../img/desktop/image-hero.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      height: 90vh; } }
   .header__top {
     display: flex;
     flex-direction: row;
@@ -368,9 +388,22 @@ h1 {
     margin-left: 2.5rem;
     font-size: 2rem;
     gap: 1rem; }
+    @media only screen and (min-width: 40.625em) {
+      .header__list {
+        flex-direction: row;
+        font-size: 1rem;
+        list-style-type: none;
+        position: static;
+        justify-content: flex-end;
+        margin: 0.5rem 2rem 0 0;
+        gap: 1.7rem;
+        font-weight: 700; } }
   .header__list-item {
     font-family: "Josefin Sans", sans-serif;
     text-transform: uppercase; }
+    @media only screen and (min-width: 40.625em) {
+      .header__list-item {
+        text-transform: none; } }
   .header__list-link {
     text-decoration: none;
     color: white; }
@@ -385,6 +418,9 @@ h1 {
   height: 30px;
   background-position: center center;
   z-index: 20; }
+  @media only screen and (min-width: 40.625em) {
+    .hamburger-menu {
+      display: none; } }
 
 .hamburger-menu.active {
   background-image: url(../img/icon-close.svg); }
@@ -397,8 +433,13 @@ h1 {
   left: 0;
   height: 100vh;
   width: 100vw;
-  transform: translateX(400%);
-  transition: transform 1s cubic-bezier(0.65, 0.05, 0.36, 1); }
+  transform: translateX(400%); }
+  @media only screen and (min-width: 40.625em) {
+    .nav {
+      background-color: transparent;
+      height: 5rem;
+      transform: translateX(0%);
+      position: static; } }
 
 .nav.active {
   display: block;
@@ -417,17 +458,49 @@ h2 {
   gap: 1.2rem;
   padding: 1rem;
   text-align: center; }
+  @media only screen and (min-width: 40.625em) {
+    .about {
+      flex-direction: row;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto; } }
+  @media only screen and (min-width: 40.625em) {
+    .about__heading {
+      text-align: left; } }
+  @media only screen and (min-width: 40.625em) {
+    .about__right-content {
+      width: 50%;
+      position: absolute;
+      background-color: white;
+      right: -4rem;
+      padding-top: 2.5rem;
+      padding-left: 1rem;
+      bottom: 2.1rem; } }
+  @media only screen and (min-width: 40.625em) and (min-width: 40.625em) {
+    .about__right-content {
+      width: 55%;
+      padding-left: 4rem;
+      text-align: left; } }
   .about__description {
     color: dimgray;
     line-height: 26px;
     max-width: 90%;
     margin: 0 auto; }
+    @media only screen and (min-width: 40.625em) {
+      .about__description {
+        margin: 0; } }
 
 .img-interactive {
   width: auto;
   max-width: 95%;
   height: auto;
   margin-bottom: 1rem; }
+
+@media only screen and (min-width: 40.625em) {
+  .creations__heading {
+    max-width: 1060px;
+    margin: 0 auto;
+    text-align: left; } }
 
 .creations__btn {
   background-color: white;
@@ -444,6 +517,13 @@ h2 {
   flex-direction: column;
   gap: 1.5rem;
   padding: 1rem; }
+  @media only screen and (min-width: 40.625em) {
+    .gallery-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto; } }
 
 .gallery {
   position: relative; }

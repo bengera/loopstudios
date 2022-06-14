@@ -1,32 +1,73 @@
 h2 {
-    font-size: 35px;
-    font-weight: 300;
-    font-family: $font-secondary;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: 35px;
+  font-weight: 300;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+  text-align: center;
+
+  @media only screen and (min-width: $bp-desktop) {
+    flex-direction: row;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
   }
-  
-  .about {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    padding: 1rem;
-    text-align: center;
+
+  // &__picture {}
+
+  &__heading {
     
-    &__picture {}
-  
-    &__description {
-      color: $color-very-dark-gray;
-      line-height: 26px;
-      max-width: 90%;
-      margin: 0 auto;
-  
+
+    @media only screen and (min-width: $bp-desktop) {
+      
+      text-align: left;
+     }
+  }
+
+  &__right-content {
+
+    @media only screen and (min-width: $bp-desktop) {
+      width: 50%;
+      position: absolute;
+      background-color: white;
+      right: -4rem;
+      padding-top: 2.5rem;
+      padding-left: 1rem;
+      bottom: 2.1rem;
+      
+
+      @media only screen and (min-width: $bp-desktop) {
+       width: 55%;
+       padding-left: 4rem;
+       text-align: left;
+      }
     }
   }
-  
-  .img-interactive {
-    width: auto;
-    max-width: 95%;
-    height: auto;
-    margin-bottom: 1rem;
+
+  &__description {
+    color: $color-very-dark-gray;
+    line-height: 26px;
+    max-width: 90%;
+    margin: 0 auto;
+
+    @media only screen and (min-width: $bp-desktop) {
+      margin: 0;
+    }
+
   }
+}
+
+.img-interactive {
+  width: auto;
+  max-width: 95%;
+  height: auto;
+  margin-bottom: 1rem;
+}
