@@ -26,11 +26,18 @@
 
   }
 
+  &__btn--desktop {
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-black;
+    }
+  }
+
   &__top-bar {
 
     @media only screen and (min-width: $bp-desktop) {
     display: flex;
-    // border: 1px solid black;
     justify-content: space-between;
     max-width: 1060px;
     margin: 0 auto;

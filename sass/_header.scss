@@ -6,10 +6,7 @@
   @media only screen and (min-width: $bp-desktop) {
     width: 40rem;
     margin: 15rem 0 0 2rem;
-    // margin: 15rem auto 0 auto;
-
-
-
+    
   }
 }
 
@@ -66,12 +63,10 @@ h1 {
 
   &__logo {
     height: 30px;
-  }
-
-  &__logo.active {
     z-index: 100;
   }
 
+ 
   &__list {
     display: flex;
     flex-direction: column;
@@ -106,7 +101,29 @@ h1 {
   &__list-link {
     text-decoration: none;
     color: $color-white;
+    position: relative;
+    
+    // &:hover {
+    //   border-bottom: 2px solid $color-white;
+    //   padding-bottom: 0.5rem;
+    // }
   }
+}
+
+.header__list-link:hover::after {
+
+  @media only screen and (min-width: $bp-desktop) {
+  content: "";
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-bottom: 2px solid $color-white;
+  bottom: -10px;
+  padding-bottom: 0.5rem;
+  left: 15px;
+  
+  }
+  
 }
 
 .hamburger-menu {
@@ -137,13 +154,15 @@ h1 {
   left: 0;
   height: 100vh;
   width: 100vw;
-  transform: translateX(400%); // default 400%
+  // transform: translateX(400%); // default 400%
+  animation: append-animate .3s linear;
   // transition: transform 1s cubic-bezier(.65,.05,.36,1);
 
   @media only screen and (min-width: $bp-desktop) {
+    display: block;
     background-color: transparent;
     height: 5rem;
-    transform: translateX(0%);
+    // transform: translateX(0%);
     position: static;
 
   }
@@ -151,5 +170,17 @@ h1 {
 
 .nav.active {
   display: block;
-  transform: translateX(0);
+  // transform: translateX(0);
+  
 }
+
+
+@keyframes append-animate {
+  from {
+    transform: translateX(400%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+    

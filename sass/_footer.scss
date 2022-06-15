@@ -1,62 +1,132 @@
 .footer {
-    background-color: $color-black;
+  background-color: $color-black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+
+  @media only screen and (min-width: $bp-desktop) {
+    display: block;
+    text-align: left;
     padding: 2rem;
-    // border: 2px solid red;
+
+  }
+
+
+  &__container {
+
+    @media only screen and (min-width: $bp-desktop) {
+      max-width: 1140px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+    }
+
+  }
+
+  
+  &__logo {
+    margin-bottom: 1rem;
+  }
+
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: center;
-    
-    
-    &__left {
-      // border: 2px solid green;
+    list-style: none;
+
+    @media only screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+
     }
-  
-    &__logo {
-      margin-bottom: 1rem;
-    }
-  
-    &__list {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      list-style: none;
-      
-    }
-  
-    &__list-item {
-      
-      
-    }
-  
-    &__list-link {
-      color: $color-white;
-      text-decoration: none;
-      
-    }
-  
-  
-    /////////////////////////////////////////////////////
-  
-    &__right {
-      // border: 2px solid yellow;
-    }
-  
-    &__social {
-      display: flex;
-      justify-content: center;
-      gap: 1.3rem;
-      
-    }
-  
-    &__small {
-      color: $color-very-dark-gray;
-      font-size: 100%;
-    }
-  
-  
+
+  }
+
+  // &__list-item {}
+
+  &__list-link {
+    color: $color-white;
+    text-decoration: none;
+    position: relative;
+
   }
   
-  .icon {
-    cursor: pointer;
+
+
+  /////////////////////////////////////////////////////
+
+  &__right {
+
+    margin-top: 3rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 1rem;
+     
+    }
+
+
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+
+    @media only screen and (min-width: $bp-desktop) {
+      text-align: right;
+      // position: relative;
+      
+    }
+
+  }
+
+  &__small {
+    color: $color-very-dark-gray;
+    font-size: 100%;
+  }
+
+
+}
+
+.footer__list-link:hover::after {
+
+  @media only screen and (min-width: $bp-desktop) {
+    content: "";
+    width: 20px;
+    height: 5px;
+    position: absolute;
+    border-bottom: 2px solid $color-white;
+    bottom: -10px;
+    padding-bottom: 0.5rem;
+    left: 15px;
+    margin: 0 auto;
+  }
+ 
+}
+
+.icon {
+  cursor: pointer;
+
+  @media only screen and (min-width: $bp-desktop) {
+    border-bottom: solid 2px transparent;
+    padding-bottom: 0.5rem;
+    
+  }
+  
+
+  &:hover {
+    @media only screen and (min-width: $bp-desktop) {
+      border-color: $color-white
+      
+    }
+    
+    
+
+  }
+
   }
