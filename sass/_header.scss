@@ -157,6 +157,7 @@ h1 {
   
 
   @media only screen and (min-width: $bp-desktop) {
+    opacity: 1;
     display: block;
     background-color: transparent;
     height: 5rem;
