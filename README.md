@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://bengera.github.io/loopstudios/)
+- Live Site URL: [Live Solution](https://bengera.github.io/loopstudios/)
 
 ## My process
 - A mistake I had made previously was not looking carefully enough at both the mobile and desktop versions of the site and thinking about
